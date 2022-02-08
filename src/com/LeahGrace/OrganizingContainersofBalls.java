@@ -49,8 +49,8 @@ public class OrganizingContainersofBalls {
 
     public static void main(String[] args) {
         List<List<Integer>> list = new ArrayList<>();
-        list.add(Arrays.asList(new Integer[] {0,2}));
-        list.add(Arrays.asList(new Integer[] {1,1}));
+        list.add(Arrays.asList(0,2));
+        list.add(Arrays.asList(1,1));
         System.out.println(organizingContainers(list)); //call the method, not the class
     }
 }
