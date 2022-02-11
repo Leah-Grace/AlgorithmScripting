@@ -1,4 +1,4 @@
-package com.LeahGrace;
+package com.LeahGrace.Practice.ProblemSolving.DataStructures;
 
 import java.io.*;
         import java.math.*;
@@ -59,7 +59,6 @@ public class StringsMakingAnagrams {
                     deletionCount += (int)charMapB.get(c);
                 }
             }
-
         }
         return deletionCount;
 
@@ -73,7 +72,7 @@ public class StringsMakingAnagrams {
         String a = "fcrxzwscanmligyxyvym";
         String b = "jxwtrhvujlmrpdoqbisbwhmgpmeoke";
 
-        int res = StringsMakingAnagrams.makeAnagram(a, b);
+        int res = makeAnagram(a, b);
 
         System.out.println(res);
 

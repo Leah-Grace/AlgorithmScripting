@@ -1,4 +1,4 @@
-package com.LeahGrace;
+package com.LeahGrace.Practice.ProblemSolving.Algorithms.Implementation;
 
 import java.io.*;
 import java.math.*;
@@ -17,6 +17,7 @@ public class OrganizingContainersofBalls {
         // Write your code here
         String result = "Possible";
         Map capacityMap = new HashMap<Integer, Integer>();
+        //HashMap<Integer, Integer> capacityMap = new HashMap<>();
         //iterate over arrays to count container capacities
         for (int i = 0; i < container.size(); i++) {
             int containerCapacity = 0;
@@ -39,6 +40,8 @@ public class OrganizingContainersofBalls {
             if (capacityMap.containsKey(ballInventory) && (int) capacityMap.get(ballInventory) > 0) ///// *****Is (int)capacityMap.get(ballInventory) necessary (NOT REALLY). ---> WHERE ARE FREQUENCIES >1 ACCOUNTED FOR?
             {
                 capacityMap.put(ballInventory, (int) capacityMap.get(ballInventory) - 1);
+                    //using a Map Interface eliminates the need to cast (int) to Integer object RESULT : Operator '-' cannot be applied to 'java.lang.Object', 'int'
+                //capacityMap.put(ballInventory,  capacityMap.get(ballInventory) - 1);
             } else {
                 result = "Impossible";
             }

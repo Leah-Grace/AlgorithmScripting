@@ -1,4 +1,4 @@
-package com.LeahGrace;
+package com.LeahGrace.Practice.ProblemSolving.DataStructures;
 
 import java.util.*;
 
