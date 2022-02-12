@@ -17,36 +17,29 @@ public class Day22BinarySearchTrees {
             }
       }
 
-            public static int getHeight(Node root){
-                  //Write your code here
-                  int leftTree = 0;
-                  int rightTree = 0;
-                  Node current = root;
+      public static int getHeight(Node root){
+            //Write your code here
+            int leftTree = 0;
+            int rightTree = 0;
+            Node current = root;
 
-                  while (current.right != null){
-                        rightTree++;
-                        current = current.right;
-                        // System.out.println(current.data);
-                  }
-
-                  current = root;
-
-                  while(current.left !=null){
-                        leftTree++;
-                        current = current.left;
-                  }
-                  //System.out.println(root.left.data);
-                  // System.out.println(root.right.data);
-
-                  //System.out.println(rightTree);
-
-                  if (leftTree >= rightTree){
-                        return leftTree;
-                  }
-
-                  return rightTree;
+            if (current.right != null){
+                  //rightTree++;
+                  rightTree += getHeight(current.right) + 1;
 
             }
+
+            current = root;
+
+            if (current.left !=null){
+                  //leftTree++;
+                  leftTree += getHeight(current.left) + 1;
+            }
+
+
+            return (leftTree >= rightTree) ? leftTree : rightTree;
+
+      }
 
             public static Node insert(Node root,int data){
                   if(root==null){
@@ -93,7 +86,7 @@ public class Day22BinarySearchTrees {
 
 
 
-/* Previous solution
+/* Previous solution for Java 15 (failed 1/3)
 
 import java.io.*;
 import java.util.*;
