@@ -1,15 +1,14 @@
 package com.LeahGrace.Practice.Tutorials.ThirtyDaysOfCode;
 import java.util.*;
-import java.io.*;
 
-
-
+/*
 
 public class Day22BinarySearchTrees {
 
 
       class Node{
-            com.LeahGrace.Practice.Tutorials.ThirtyDaysOfCode.Node left,right;
+            Node left;
+            Node right;
             int data;
             Node(int data){
                   this.data=data;
@@ -77,7 +76,7 @@ public class Day22BinarySearchTrees {
 
 
 
-
+*/
 
 
 
