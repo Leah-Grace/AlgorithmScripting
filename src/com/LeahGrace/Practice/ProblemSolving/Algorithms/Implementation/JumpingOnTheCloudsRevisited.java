@@ -1,56 +1,33 @@
 package com.LeahGrace.Practice.ProblemSolving.Algorithms.Implementation;
 
-import java.io.*;
-import java.lang.reflect.Array;
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class JumpingOnTheCloudsRevisited {
 
     public static void main(String[] args) {
-
-
-
-
+        /* TEST CASE 0 *****
        // int n = 8; //number of clouds
       //  int k = 2; //Jump size
+        //ArrayList<Integer> c = new ArrayList<>(Arrays.asList(0, 0, 1, 0, 0, 1, 1, 0));
+         */
 
         int n = 10;
         int k = 3;
 
         int e = 100; //energy level
         int startFinishIndex = 0; //index of cloud to finish on
-        int columnusCloudDifferential = 1;
-        int thundercloudEnergyDifferential = 2 + columnusCloudDifferential; //energy spent landing on thunderclouds
-
-        //ArrayList<Integer> c = new ArrayList<>(Arrays.asList(0, 0, 1, 0, 0, 1, 1, 0));
+        int cumulusCloudDifferential = 1;
+        int thundercloudEnergyDifferential = 2 + cumulusCloudDifferential; //energy spent landing on thunderclouds
 
         ArrayList<Integer> c = new ArrayList<>(Arrays.asList(1, 1, 1, 0, 1, 1, 0, 0, 0, 0));
 
-        int jumpCounter = 0;
-        int engeryTax = 0;
-
-      // for (int i = 0 + k; i <= c.size(); i += k)
        do {
-           jumpCounter++;
            startFinishIndex += k;
-           int singleJumpTax = (c.get(startFinishIndex % n) != 0 ? thundercloudEnergyDifferential : columnusCloudDifferential);
-
-           System.out.println("Index of " + (startFinishIndex % n) + " and value of " + c.get(startFinishIndex % n) + " with energy/jump tax of " + singleJumpTax);
-           engeryTax += singleJumpTax;
+           e -= (c.get(startFinishIndex % n) != 0 ? thundercloudEnergyDifferential : cumulusCloudDifferential);
 
        } while ((startFinishIndex % n) != 0);
-        System.out.println("Total jumps " + jumpCounter);
-        System.out.println("And total energy spent " + (e - engeryTax));
 
-
-
-
-
-
-
-
-
+        System.out.println(e);
 
     }
 }
