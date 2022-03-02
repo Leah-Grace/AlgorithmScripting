@@ -16,9 +16,9 @@ public class LinkedList {
         // remove(head, 5);  // remove int(not tail)
         // remove(head, 8);  //  remove int(not tail)
 
-        //  find(head, 2);  // find 2 - - - success
-        //  find(head, 8);  // find 8 - - - success
-        //  find(head, 5);  // find 5 - - - success
+          find(head, 2);  // find 2 - - - success
+          find(head, 8);  // find 8 - - - success
+          find(head, 5);  // find 5 - - - success
         //  find(head, 9);  // find 9 - - - success
         //  find(head, 0);  // find 0 - - - success
 
