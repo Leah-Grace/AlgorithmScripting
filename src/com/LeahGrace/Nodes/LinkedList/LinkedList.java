@@ -23,7 +23,13 @@ public class LinkedList {
         //  find(head, 0);  // find 0 - - - success
 
     }
+    /*
+    [2, 8, 5, 9]
+    trav = 2            head = 2
+    trav.next = 8  /// k = 8   //reassign trav.next to trav.next.next reassigns 8 to 5
+    trav.next.next = 5
 
+*/
     public static Node<Integer> addNode(Node<Integer> head, int value) {
         Node<Integer> newNode = new Node<Integer>(value);
         if (head == null) {
