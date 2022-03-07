@@ -1,48 +1,18 @@
 package com.LeahGrace.Udemy.InterviewPractiveAlgorithms;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Equilibrium {
 
-    public static int returnAbsoluteLeftRight(int[] arr){
+    public static int returnAbsoluteLeftRight(Integer[] arr){
 
-        int leftTrav = 0;
-        int rightTrav = arr.length - 1;
-
-        int left = arr[leftTrav];
-        int right = arr[rightTrav];
-
-        System.out.println("The left is " + left);
-        System.out.println("The right is " + right);
+        List<Integer> List = Arrays.asList(arr);
+        Integer sum = List.stream().reduce(0, Integer::sum);
 
 
 
-        while (leftTrav < rightTrav) {
-
-            System.out.println("The left trav starts at " + leftTrav);
-
-            System.out.println("The left would increase to " + (left + arr[leftTrav++]));
-            System.out.println("The right would increase to " + (right + arr[rightTrav++]));
-            System.out.println("");
-            System.out.println("The left trav starts at " + leftTrav);
-
-/*
-            if (left < right) {
-                leftTrav++;
-                left += arr[leftTrav];
-                System.out.println("The left is now " + left);
-                break;
-            }
-            if (right < left) {
-                rightTrav--;
-                right += arr[rightTrav];
-                break;
-            }
- */
-        }
-
-
-
-
-        return 0;
+        return sum;
     }
 
 
@@ -55,9 +25,9 @@ public class Equilibrium {
     }
 
     public static void main(String[] args) {
-        int[] arr1 = {2, 3, 1, 5, 6, 1, 2, 1};
-        int[] arr2 = {2, 4, 7, 8, 1, 5, 3};
-        int[] arr3 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        Integer[] arr1 = {2, 3, 1, 5, 6, 1, 2, 1};
+        Integer[] arr2 = {2, 4, 7, 8, 1, 5, 3};
+        Integer[] arr3 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         System.out.println(returnAbsoluteLeftRight(arr1));
 
