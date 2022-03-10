@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Equilibrium {
 
-    public static int solution(Integer[] A){
+    public static int solution(int[] A){
         int leftSum = A[0];
         int rightSum = 0;
 
@@ -33,14 +33,14 @@ public class Equilibrium {
         return diff;
     }
 
-    public static int returnAbsoluteLeftRight(Integer[] arr){
+    public static int returnAbsoluteLeftRight(int[] arr){
 
         List<Integer> List = Arrays.asList(arr);  // Convert Integer array to List of Integers
         int sum = List.stream().reduce(0, Integer::sum);  //  Calculate sum of all Integers
 
         int pointer = 0;  //pointer to iterate over array
         int leftSum = 0;  //accumulation  of values left of pointer
-        int smallestABV = sum;  //Declare smallestABV and initialize to the sum of all integers in arr (the highest possible value)
+        int smallestABV = Math.abs(sum);  //Declare smallestABV and initialize to the sum of all integers in arr (the highest possible value)
 
         while (pointer < arr.length) {
             leftSum += arr[pointer];
@@ -61,18 +61,34 @@ public class Equilibrium {
         Integer[] arr1 = {2, 3, 1, 5, 6, 1, 2, 1};
         Integer[] arr2 = {2, 4, 7, 8, 1, 5, 3};
         Integer[] arr3 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        Integer[] codilityExample = {3, 1, 2, 4, 3};
+        int[] codilityExample = {-3, -1, -2, -4, -3};
 
        // System.out.println(returnAbsoluteLeftRight(arr1));
-       // System.out.println(returnAbsoluteLeftRight(codilityExample));
+        System.out.println(returnAbsoluteLeftRight(codilityExample));
         System.out.println(solution(codilityExample));
 
 //        System.out.println(returnAbsoluteLeftRight(arr1));
 //        System.out.println(returnAbsoluteLeftRight(arr2));
 //        System.out.println(returnAbsoluteLeftRight(arr3));
 
-
-
     }
 
 }
+
+
+
+
+/*
+********* CODILITY FEEDBACK ********
+
+*
+* simple_negative
+simple test with negative numbers, length = 5✘WRONG ANSWER
+got -27 expected 3
+1.0.104 sWRONG ANSWER, got -27 expected 3
+2.0.104 sWRONG ANSWER, got -10 expected 0
+*
+
+* !!!!!!!!! THERE MUST BE AN ISSUE WITH RETURNING SUMS THAT ARE NOT ABSOLUTE VALUES IF NEGATIVE NUMBERS ARE BEING SUBMITTED AS THE ANSWER.
+
+ */
