@@ -12,7 +12,6 @@ public class Day21Generics {
                 System.out.println(element);
             }
         }
-
     }
 
     public class Generics {
