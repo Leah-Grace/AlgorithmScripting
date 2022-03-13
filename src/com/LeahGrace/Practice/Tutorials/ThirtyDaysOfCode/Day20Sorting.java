@@ -30,12 +30,14 @@ public class Solution {
         // Write your code here
         int swaps = 0;
 
-        for (int i = 0; i < a.size() - 1; i++){
-            if (a.get(i) > a.get(i + 1)){
-                int temp = a.get(i);
-                a.set(i, a.get(i + 1));
-                a.set((i + 1), temp);
-                swaps++;
+        for (int j = 0; j < a.size(); j++){
+            for (int i = 0; i < a.size() - 1; i++){
+                if (a.get(i) > a.get(i + 1)){
+                    int temp = a.get(i);
+                    a.set(i, a.get(i + 1));
+                    a.set((i + 1), temp);
+                    swaps++;
+                }
             }
         }
 
