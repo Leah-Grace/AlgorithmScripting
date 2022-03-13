@@ -30,13 +30,18 @@ public class Solution {
         // Write your code here
         int swaps = 0;
 
-        for (int i : a){
-            System.out.println(i);
+        for (int i = 0; i < a.size() - 1; i++){
+            if (a.get(i) > a.get(i + 1)){
+                int temp = a.get(i);
+                a.set(i, a.get(i + 1));
+                a.set((i + 1), temp);
+                swaps++;
+            }
         }
 
         System.out.println("Array is sorted in " + swaps + " swaps.");
         System.out.println("First Element: " + a.get(0));
-        System.out.println("First Element: " + a.get(a.size() - 1));
+        System.out.println("Last Element: " + a.get(a.size() - 1));
 
 
 
