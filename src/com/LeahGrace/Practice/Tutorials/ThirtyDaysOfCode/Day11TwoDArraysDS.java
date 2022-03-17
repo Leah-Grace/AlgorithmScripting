@@ -11,40 +11,30 @@ public class Day11TwoDArraysDS {
 
     class Result {
 
-        /*
-         * Complete the 'hourglassSum' function below.
-         *
-         * The function is expected to return an INTEGER.
-         * The function accepts 2D_INTEGER_ARRAY arr as parameter.
-         */
-
         public static int hourglassSum(List<List<Integer>> arr) {
             // Write your code here
             int maxSum = 0;
-            int tempSum = 0;
-            int[] intArray = new int[7];
+            Integer tempSum = 0;
+            ArrayList<Integer> sumsList = new ArrayList<Integer>(16);
 
             for (int i = 0; i < arr.size() - 2; i++){
                 for (int j = 0; j < arr.get(i).size() - 2; j++){
-                    System.out.println("tempSum is " + tempSum);
-                    // tempSum += arr.get(i).get(j) + arr.get(i).get(j+1) + arr.get(i).get(j + 2);
                     tempSum += arr.get(i + 1).get(j + 1);
-                    //    tempSum += arr.get(i+ 2).get(j) + arr.get(i+2).get(j+1) + arr.get(i + 2).get(j + 2);
+
                     for (int k = 0; k < 3; k++){
-                        System.out.println("tempSum is " + tempSum);
                         tempSum += arr.get(i).get(j + k);
-                        System.out.println("tempSum is " + tempSum);
                         tempSum += arr.get(i+2).get(j + k);
-                        System.out.println("tempSum is " + tempSum);
                     }
+                    int[] sums = new int[16];
+                    sumsList.add(tempSum);
+                    System.out.println("tempSum is " + tempSum);
                     if (tempSum > maxSum){
                         maxSum = tempSum;
                     }
                     tempSum = 0;
                 }
             }
-            System.out.println(maxSum);
-            return maxSum;
+            return Collections.max(sumsList);
         }
     }
 
