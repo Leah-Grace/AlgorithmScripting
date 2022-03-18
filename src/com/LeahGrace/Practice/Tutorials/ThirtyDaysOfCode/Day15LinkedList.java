@@ -4,15 +4,6 @@ import java.io.*;
 import java.util.*;
 
 
-    public class Node {
-        int data;
-        Node next;
-        Node(int d) {
-            data = d;
-            next = null;
-        }
-    }
-
 public class Day15LinkedList {
 
         public static  Node insert(Node head,int data) {

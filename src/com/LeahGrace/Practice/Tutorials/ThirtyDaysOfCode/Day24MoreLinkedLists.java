@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 
-
+/*
 class Node{
     int data;
     Node next;
@@ -12,6 +12,8 @@ class Node{
         next=null;
     }
 }
+*/
+
 public class Day24MoreLinkedLists {
 
         public static Node removeDuplicates(Node head) {
