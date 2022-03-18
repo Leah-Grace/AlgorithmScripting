@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 
-    class Node {
+    public class Node {
         int data;
         Node next;
         Node(int d) {
