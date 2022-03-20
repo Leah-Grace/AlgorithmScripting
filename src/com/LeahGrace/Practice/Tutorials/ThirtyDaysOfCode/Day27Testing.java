@@ -4,12 +4,7 @@ import java.util.*;
 
 
 public class Day27Testing {
-public class TestDataEmptyArray {
-    static int[] arr = new int[0];
-    public static int[] get_array(){
-        return arr;
-    }
-}
+
     public static int minimum_index(int[] seq) {
         if (seq.length == 0) {
             throw new IllegalArgumentException("Cannot get the minimum value index from an empty sequence");
@@ -23,8 +18,34 @@ public class TestDataEmptyArray {
         return min_idx;
     }
 
-    public static int[] get_array() {
-        return new int[0];
+    static class TestDataEmptyArray {
+        public static int[] get_array(){
+            // System.out.println("Test data empty arr");
+            return new int[0];
+        }
+    }
+
+    static class TestDataUniqueValues {
+        public static int[] arr = new int[]{ 1, 2};
+        public static int[] get_array(){
+           // System.out.println("Test data unique val");
+            return arr;
+        }
+        public static int get_expected_result(){
+            return minimum_index(arr);
+        }
+    }
+
+    static class TestDataExactlyTwoDifferentMinimums {
+        public static int[] arr = new int[]{ 1, 1, 2, 3, 4};
+
+        public static int[] get_array(){
+            return arr;
+        }
+
+        public static int get_expected_result(){
+            return minimum_index(arr);
+        }
     }
 
     public static void TestWithEmptyArray() {
@@ -37,7 +58,7 @@ public class TestDataEmptyArray {
         }
         throw new AssertionError("Exception wasn't thrown as expected");
     }
-/*
+
     public static void TestWithUniqueValues() {
         int[] seq = TestDataUniqueValues.get_array();
         if (seq.length < 2) {
@@ -78,13 +99,10 @@ public class TestDataEmptyArray {
         }
     }
 
-
- */
-
     public static void main(String[] args) {
         TestWithEmptyArray();
-    //    TestWithUniqueValues();
-   //     TestWithExactlyTwoDifferentMinimums();
+        TestWithUniqueValues();
+        TestWithExactlyTwoDifferentMinimums();
         System.out.println("OK");
     }
 
