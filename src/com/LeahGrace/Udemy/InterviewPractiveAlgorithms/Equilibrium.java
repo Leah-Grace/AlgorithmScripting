@@ -2,7 +2,7 @@ package com.LeahGrace.Udemy.InterviewPractiveAlgorithms;
 
 import java.util.Arrays;
 import java.util.List;
-
+/*
 public class Equilibrium {
 
     public static int solution(int[] A){
@@ -32,7 +32,7 @@ public class Equilibrium {
 
         return diff;
     }
-
+/*
     public static int returnAbsoluteLeftRight(int[] arr){
 
         List<Integer> List = Arrays.asList(arr);  // Convert Integer array to List of Integers
@@ -57,6 +57,8 @@ public class Equilibrium {
         return smallestABV;
     }
 
+ */
+/*
     public static void main(String[] args) {
         Integer[] arr1 = {2, 3, 1, 5, 6, 1, 2, 1};
         Integer[] arr2 = {2, 4, 7, 8, 1, 5, 3};
@@ -66,16 +68,16 @@ public class Equilibrium {
        // System.out.println(returnAbsoluteLeftRight(arr1));
         System.out.println(returnAbsoluteLeftRight(codilityExample));
         System.out.println(solution(codilityExample));
-
+*/
 //        System.out.println(returnAbsoluteLeftRight(arr1));
 //        System.out.println(returnAbsoluteLeftRight(arr2));
 //        System.out.println(returnAbsoluteLeftRight(arr3));
-
+/*
     }
 
 }
 
-
+*/
 
 
 /*
