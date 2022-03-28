@@ -16,20 +16,7 @@ public class ApplesAndOranges {
 
     class Result {
 
-        /*
-         * Complete the 'countApplesAndOranges' function below.
-         *
-         * The function accepts following parameters:
-         *  1. INTEGER s - - House area start
-         *  2. INTEGER t - - House area end
-         *  3. INTEGER a - - Apple Tree location
-         *  4. INTEGER b - - Orange Tree location
-         *  5. INTEGER_ARRAY apples - - Apple locations
-         *  6. INTEGER_ARRAY oranges - - Orange locations
-         */
-
         public static void countApplesAndOranges(int houseStart, int houseEnd, int appleTree, int orangeTree, List<Integer> apples, List<Integer> oranges) {
-            // Write your code here
 
             int appleCount = 0;
             int orangeCount = 0;
