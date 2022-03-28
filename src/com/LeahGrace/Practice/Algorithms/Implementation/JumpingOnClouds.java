@@ -39,7 +39,7 @@ public class JumpingOnClouds {
     }
 
 }
-
+/*
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
@@ -60,3 +60,5 @@ public class Solution {
         bufferedWriter.close();
     }
 }
+
+ */
