@@ -8,7 +8,7 @@ public class Day25RunningTimeAndComplexity {
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         String determination = "Not prime";
-        ArrayList<String> results = new ArrayList<>();
+        //ArrayList<String> results = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
         int testCases = scan.nextInt();
 
@@ -17,11 +17,9 @@ public class Day25RunningTimeAndComplexity {
             double sqrt = Math.sqrt(num);
             System.out.println(sqrt);
 
-            determination = "Prime";
-
             for (int i = 2; i < num; i++){
                 if (num % i == 0){
-                    // System.out.println(num + " % " + i + " is " + (num % i));
+                    System.out.println(num + " % " + i + " is " + (num % i));
                     determination = "Not prime";
                     // System.out.println(determination);
                     //continue;
