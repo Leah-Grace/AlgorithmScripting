@@ -27,8 +27,11 @@ public class Day2Operators {
 
         public static void solve(double meal_cost, int tip_percent, int tax_percent) {
             // Write your code here
-            System.out.println((int)(meal_cost + (double)(meal_cost * (double)((double)tip_percent/100)) +  (meal_cost * (double)((double)tax_percent/100))));
+            double meal_tip = (meal_cost * tip_percent/100);
+            double meal_tax = (meal_cost * tax_percent/100);
+            double total = (meal_cost + meal_tip + meal_tax);
 
+            System.out.println(Math.round(total));
         }
 
     }
